@@ -1,0 +1,17 @@
+{
+  "name": "Node 20",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "VARIANT": "20-bullseye"
+    }
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": ["dbaeumer.vscode-eslint"],
+  "forwardPorts": [3100],
+  "postCreateCommand": "yarn install",
+  "remoteUser": "node"
+}
